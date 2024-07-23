@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    ;
+}
+
+.container {
+    background-color: white;
+    width: 95%;
+    height: 94%;
+    border-radius: 8px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
