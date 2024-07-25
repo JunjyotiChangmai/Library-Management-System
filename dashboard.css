@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    width: 95%;
+    height: 94%;
+    border-radius: 8px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    display: flex;
+    
+}
+.left {
+    width: 17%;
+    height: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    padding: 20px;
+}
+.logo img {
+    width: 165px;
+}
+.menu {
+    padding-top: 10px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 21px;
+}
+li {
+    list-style: none;
+    font-size: 17px;
+    color: #4D4D4D;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.right {
+    padding: 24px 40px 30px 20px;
+    width: 83%;
+    height: 100%;
+    background-color: #F7F7F7;
+    /* background-color: #F7F7F7; */
+    color: #4D4D4D;
+}
+.right-navbar {
+    padding: 0px 20px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.searchBar {
+    width: 300px;
+    border: none;
+    box-shadow: #C7C7C7 0px 0px 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border-radius: 24px;
+    background-color: white;
+}
+.search {
+    width: 200px;
+    height: 22px;
+    border: none;
+    outline: none;
+    color: #4D4D4D;
+}
+.search-icon i {
+    color: #F76B56;
+}
+.Profile {
+    width: 130px;
+    border: none;
+    box-shadow: #C7C7C7 0px 0px 3px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-radius: 24px;
+    background-color: white;
+}
+.pro-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.Profile p {
+    margin-right: 34px;
+}
+
+.table-container {
+    margin-top: 20px;
+    width: 100%;
+}
+#booksTable {
+    display: flex;
+    width: 100%;
+    padding-bottom: 6px;
+    color: #414141;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+.title-Box {
+    width: 40%;
+    padding: 7px 16px 7px 0px;
+}
+.author-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+}
+.branch-Box {
+    width: 20%;
+    padding: 7px 16px 7px 0px;
+}
+.av-Box {
+    width: 20%; 
+    padding: 7px 16px 7px 0px;
+}
+
+.books {
+    display: flex;
+    padding: 15px 5px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: #ede7e7 0px 0px 3px;
+}
+.book-title-Box {
+    width: 40%;
+    padding: 7px 16px 7px 7px;
+}
+.book-author-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+}
+.book-branch-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+}
+.book-av-Box {
+    width: 20%; 
+    padding: 7px 16px 7px 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.dot-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(44, 202, 44);
+}
+
+
+
+
+
+/* .table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.actions button {
+    padding: 5px 10px;
+    cursor: pointer;
+} */
