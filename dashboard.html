@@ -15,10 +15,10 @@
             <div class="logo"><img src="DEC_LOGO.png" alt="LOGO"></div>
             <div class="menu">
                 <ul>
-                    <li><i class="fa-solid fa-magnifying-glass"></i>Search</li>
-                    <li><i class="fa-solid fa-book"></i>Add Book</li>
-                    <li><i class="fa-solid fa-user"></i>Add Student</li>
-                    <li><i class="fa-solid fa-chart-simple"></i>Reports</li>
+                    <li class="search-btn" onclick={allBooks()} ondblclick={searchBtnClick()}><i class="fa-solid fa-magnifying-glass"></i>Search</li>
+                    <li class="addBook-btn" onclick={addBookBtnClick()}><i class="fa-solid fa-book"></i>Add Book</li>
+                    <li class="addStu-btn" onclick={addStuBtnClick()}><i class="fa-solid fa-user"></i>Add Student</li>
+                    <li class="report-btn" onclick={reportBtnClick()}><i class="fa-solid fa-chart-simple"></i>Reports</li>
                 </ul>
             </div>
         </div>
@@ -38,33 +38,13 @@
                     <div class="branch-Box">Catagory    </div>
                     <div class="av-Box">Availability</div>
                 </div>
-                <div class="books">
-                    <div class="book-title-Box">Lorem ipsum dolor sit amet.</div>
-                    <div class="book-author-Box">Junjyoti</div>
-                    <div class="book-branch-Box">CSE</div>
-                    <div class="book-av-Box"><div class="dot-icon"></div>Available</div>
-                </div>
-                <div class="books">
-                    <div class="book-title-Box">Lorem ipsum dolor sit amet.</div>
-                    <div class="book-author-Box">Junjyoti</div>
-                    <div class="book-branch-Box">CSE</div>
-                    <div class="book-av-Box"><div class="dot-icon"></div>Available</div>
-                </div>
-                <div class="books">
-                    <div class="book-title-Box">Lorem ipsum dolor sit amet.</div>
-                    <div class="book-author-Box">Junjyoti</div>
-                    <div class="book-branch-Box">CSE</div>
-                    <div class="book-av-Box"><div class="dot-icon"></div>Available</div>
-                </div>
-                <div class="books">
-                    <div class="book-title-Box">Lorem ipsum dolor sit amet.</div>
-                    <div class="book-author-Box">Junjyoti</div>
-                    <div class="book-branch-Box">CSE</div>
-                    <div class="book-av-Box"><div class="dot-icon"></div>Available</div>
+                <div class="books-section">
+
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

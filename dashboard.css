@@ -8,7 +8,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("Login.jpg");
+    background-image: url("Login2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,22 +18,22 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color: #F7F7F7;
     width: 95%;
     height: 94%;
     border-radius: 8px;
-    overflow-x: scroll;
-    scrollbar-width: none;
+    overflow-x: hidden;
     display: flex;
-    
+    position: relative  ;
 }
 .left {
     width: 17%;
     height: 100%;
-    /* background-color: lightblue; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    position: fixed;
 }
 .logo {
     padding: 20px;
@@ -53,18 +53,25 @@ ul {
 li {
     list-style: none;
     font-size: 17px;
-    color: #4D4D4D;
+    /* color: #4D4D4D; */
+    color:#767272;
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.search-btn {
+    color: #0007D6;
 }
 .right {
     padding: 24px 40px 30px 20px;
     width: 83%;
-    height: 100%;
     background-color: #F7F7F7;
-    /* background-color: #F7F7F7; */
     color: #4D4D4D;
+    position: absolute;
+    top: 0px;
+    right: -16px;
 }
 .right-navbar {
     padding: 0px 20px 30px 20px;
@@ -90,10 +97,11 @@ li {
     color: #4D4D4D;
 }
 .search-icon i {
-    color: #F76B56;
+    color: #151ce7;
+    /* color: #F76B56; */
 }
 .Profile {
-    width: 130px;
+    width: 110px;
     border: none;
     box-shadow: #C7C7C7 0px 0px 3px ;
     display: flex;
@@ -107,19 +115,21 @@ li {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: salmon;
+    background-color: #0007D6;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
 .Profile p {
-    margin-right: 34px;
+    margin-right: 20px;
 }
 
 .table-container {
     margin-top: 20px;
     width: 100%;
+    
+
 }
 #booksTable {
     display: flex;
@@ -129,6 +139,12 @@ li {
     font-size: 17px;
     font-weight: 500;
 
+
+}
+.books-section {
+    overflow: scroll;
+    scrollbar-width: none;
+    font-size: 15px;
 }
 .title-Box {
     width: 40%;
@@ -147,25 +163,26 @@ li {
     padding: 7px 16px 7px 0px;
 }
 
-.books {
-    display: flex;
-    padding: 15px 5px;
-    background-color: white;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    box-shadow: #ede7e7 0px 0px 3px;
-}
 .book-title-Box {
     width: 40%;
     padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
 }
 .book-author-Box {
     width: 20%;
     padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
 }
 .book-branch-Box {
     width: 20%;
     padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
 }
 .book-av-Box {
     width: 20%; 
