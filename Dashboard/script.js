@@ -110,7 +110,7 @@ const booksTable = document.getElementsByClassName('books-section');
 function allBooks() {
     books.forEach(element => {
         const books = document.createElement('div');
-        
+
         books.style.display = `flex`;
         books.style.padding = `15px 5px`;
         books.style.backgroundColor = `white`;
@@ -127,7 +127,11 @@ function allBooks() {
 
         booksTable[0].appendChild(books);
     })
+    console.log("Running...");
 }
+
+allBooks();
+
 
 const searchBtn = document.getElementsByClassName("search-btn")
 const addBookBtn = document.getElementsByClassName("addBook-btn")

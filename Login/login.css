@@ -7,7 +7,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("Login.jpg");
+    background-image: url("../Login2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,3 +15,6 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* --------------------------------------------------------------------------------------------------- */
+
+/* Write CSS code below */

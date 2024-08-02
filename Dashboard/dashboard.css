@@ -8,7 +8,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("Login2.jpg");
+    background-image: url("../Login2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,6 +34,7 @@ body {
     align-items: center;
     background-color: white;
     position: fixed;
+    border-radius:8px ;
 }
 .logo {
     padding: 20px;
