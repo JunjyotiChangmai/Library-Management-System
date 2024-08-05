@@ -107,9 +107,9 @@ const books = [
 
 const booksTable = document.getElementsByClassName('books-section');
 
-function allBooks() {
-    books.forEach(element => {
-        const books = document.createElement('div');
+function allBooks(getBooksData) {
+    getBooksData.forEach(element => {
+        const books = document.createElement('span');
 
         books.style.display = `flex`;
         books.style.padding = `15px 5px`;
@@ -130,7 +130,7 @@ function allBooks() {
     console.log("Running...");
 }
 
-allBooks();
+allBooks(books);
 
 
 const searchBtn = document.getElementsByClassName("search-btn")
@@ -162,3 +162,26 @@ function reportBtnClick() {
     addStuBtn[0].style.color = "#767272";
     reportBtn[0].style.color = "#0007D6";
 }
+
+
+// searching working here---------------------------------------------------------------------------------------
+function getBookName() {
+    let book = document.getElementsByClassName("search")[0].value;
+    let availableBooks = searchName(books, book);
+
+    booksTable[0].innerHTML = " ";
+    allBooks(availableBooks);
+    
+}
+
+function searchName(books, bookTitle) {
+    return books.filter(item => item.title.toLowerCase().includes(bookTitle.toLowerCase()) )
+}
+
+const searchOnKeyPress = document.getElementsByClassName("search");
+searchOnKeyPress[0].addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if(event.keyCode === 13) {
+        document.getElementsByClassName("search-icon")[0].click();
+    }
+})
