@@ -28,6 +28,13 @@
                     <input class="search" type="text" placeholder="Search Books">
                     <div onclick={getBookName()} class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                 </div>
+                <div class="branch-catagory">
+                    <div class="branch-filter" onclick="filterCatagory('all')">ALL</div>
+                    <div class="branch-filter" onclick="filterCatagory('cse')">CSE</div>
+                    <div class="branch-filter" onclick="filterCatagory('me')">ME</div>
+                    <div class="branch-filter" onclick="filterCatagory('ce')">CE</div>
+                    <div class="branch-filter" onclick="filterCatagory('others')">OTHERS</div>
+                </div>
                 <div class="Profile"><div class="pro-icon"><i class="fa-solid fa-user"></i></div><p>Admin</p></div>
             </div>
 

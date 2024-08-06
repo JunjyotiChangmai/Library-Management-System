@@ -25,6 +25,7 @@ body {
     overflow: hidden;
     display: flex;
     position: relative ;
+    scrollbar-width: none;
 }
 .left {
     width: 17%;
