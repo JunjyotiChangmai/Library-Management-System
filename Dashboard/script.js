@@ -127,7 +127,6 @@ function allBooks(getBooksData) {
 
         booksTable[0].appendChild(books);
     })
-    console.log("Running...");
 }
 
 allBooks(books);
@@ -196,9 +195,7 @@ function getCatagoryData(booksData, catagoryName) {
 
 function filterCatagory(catagory) {
     if(catagory === "cse") {
-        console.log("cse");
         const result = getCatagoryData(books, 'Computer Science');
-        console.log(result);
         if(result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -209,9 +206,7 @@ function filterCatagory(catagory) {
         }
     }
     else if(catagory === "me") {
-        console.log("me");
         const result = getCatagoryData(books, 'Mechanical Engineering');
-        console.log(result)
         if(result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -222,9 +217,7 @@ function filterCatagory(catagory) {
         }
     }
     else if(catagory === "ce") {
-        console.log("ce");
         const result = getCatagoryData(books, 'Civil Engineering');
-        console.log(result)
         if(result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -235,9 +228,7 @@ function filterCatagory(catagory) {
         }
     }
     else if(catagory === "others") {
-        console.log("others");
         const result = getCatagoryData(books, 'Others');
-        console.log(result[0])
         if(result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
