@@ -137,29 +137,55 @@ const addBookBtn = document.getElementsByClassName("addBook-btn")
 const addStuBtn = document.getElementsByClassName("addStu-btn")
 const reportBtn = document.getElementsByClassName("report-btn")
 
+var DisplaySearchData = document.getElementsByClassName("SearchBooks")
+var DisplayAddBookForm = document.getElementsByClassName("AddBooksForm")
+var DisplayAddStudentForm = document.getElementsByClassName("AddStudentForm")
+var DisplayReportData = document.getElementsByClassName("ReportsData")
+
 function searchBtnClick() {
     searchBtn[0].style.color = "#0007D6";
     addBookBtn[0].style.color = "#767272";
     addStuBtn[0].style.color = "#767272";
     reportBtn[0].style.color = "#767272";
+
+    DisplaySearchData[0].style.display = "block";
+    DisplayAddBookForm[0].style.display = "none";
+    DisplayAddStudentForm[0].style.display = "none";
+    DisplayReportData[0].style.display = "none";
+
 }
 function addBookBtnClick() {
     searchBtn[0].style.color = "#767272";
     addBookBtn[0].style.color = "#0007D6";
     addStuBtn[0].style.color = "#767272";
     reportBtn[0].style.color = "#767272";
+
+    DisplaySearchData[0].style.display = "none";
+    DisplayAddBookForm[0].style.display = "block";
+    DisplayAddStudentForm[0].style.display = "none";
+    DisplayReportData[0].style.display = "none";
 }
 function addStuBtnClick() {
     searchBtn[0].style.color = "#767272";
     addBookBtn[0].style.color = "#767272";
     addStuBtn[0].style.color = "#0007D6";
     reportBtn[0].style.color = "#767272";
+
+    DisplaySearchData[0].style.display = "none";
+    DisplayAddBookForm[0].style.display = "none";
+    DisplayAddStudentForm[0].style.display = "block";
+    DisplayReportData[0].style.display = "none";
 }
 function reportBtnClick() {
     searchBtn[0].style.color = "#767272";
     addBookBtn[0].style.color = "#767272";
     addStuBtn[0].style.color = "#767272";
     reportBtn[0].style.color = "#0007D6";
+
+    DisplaySearchData[0].style.display = "none";
+    DisplayAddBookForm[0].style.display = "none";
+    DisplayAddStudentForm[0].style.display = "none";
+    DisplayReportData[0].style.display = "block";
 }
 
 
@@ -174,14 +200,14 @@ function getBookName() {
 }
 
 function searchName(books, bookTitle) {
-    return books.filter(item => item.title.toLowerCase().includes(bookTitle.toLowerCase()) )
+    return books.filter(item => item.title.toLowerCase().includes(bookTitle.toLowerCase()))
 }
 
-     //Handling search when press ENTER key---------------------------------------------------------------------------
+//Handling search when press ENTER key---------------------------------------------------------------------------
 const searchOnKeyPress = document.getElementsByClassName("search");
-searchOnKeyPress[0].addEventListener("keyup", function(event) {
+searchOnKeyPress[0].addEventListener("keyup", function (event) {
     event.preventDefault();
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
         document.getElementsByClassName("search-icon")[0].click();
     }
 })
@@ -194,9 +220,9 @@ function getCatagoryData(booksData, catagoryName) {
 }
 
 function filterCatagory(catagory) {
-    if(catagory === "cse") {
+    if (catagory === "cse") {
         const result = getCatagoryData(books, 'Computer Science');
-        if(result[0] === undefined) {
+        if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
         }
@@ -205,9 +231,9 @@ function filterCatagory(catagory) {
             allBooks(result);
         }
     }
-    else if(catagory === "me") {
+    else if (catagory === "me") {
         const result = getCatagoryData(books, 'Mechanical Engineering');
-        if(result[0] === undefined) {
+        if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
         }
@@ -216,9 +242,9 @@ function filterCatagory(catagory) {
             allBooks(result);
         }
     }
-    else if(catagory === "ce") {
+    else if (catagory === "ce") {
         const result = getCatagoryData(books, 'Civil Engineering');
-        if(result[0] === undefined) {
+        if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
         }
@@ -227,9 +253,9 @@ function filterCatagory(catagory) {
             allBooks(result);
         }
     }
-    else if(catagory === "others") {
+    else if (catagory === "others") {
         const result = getCatagoryData(books, 'Others');
-        if(result[0] === undefined) {
+        if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
         }
@@ -238,8 +264,45 @@ function filterCatagory(catagory) {
             allBooks(result);
         }
     }
-    else if(catagory === "all") {
+    else if (catagory === "all") {
         booksTable[0].innerHTML = " ";
         allBooks(books);
     }
 }
+
+
+
+// AddStudent form data handle here----------------------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date();
+    const issueDate = today.toISOString().split('T')[0];
+
+    const expireDate = new Date(today);
+    expireDate.setDate(expireDate.getDate() + 10);
+    const expireDateString = expireDate.toISOString().split('T')[0];
+
+    document.getElementById('issueDate').value = issueDate;
+    document.getElementById('expireDate').value = expireDateString;
+});
+
+document.getElementById('studentForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.getElementById('name').value,
+        rollno: document.getElementById('rollno').value,
+        branch: document.getElementById('branch').value,
+        semester: document.getElementById('semester').value,
+        bookname: document.getElementById('bookname').value,
+        issueDate: document.getElementById('issueDate').value,
+        expireDate: document.getElementById('expireDate').value,
+    };
+
+    const jsonData = JSON.stringify(formData, null, 2);
+    console.log(jsonData);
+
+    // Optionally, you can do something with the JSON data here, like sending it to a server
+
+    
+});
