@@ -1,96 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="demo.css">
-    <title>Student Form</title>
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="form-container">
-        <h2>Student Form</h2>
-        <form id="studentForm">
-            <div class="form-left">
-                <div class="form-group">
-                    <label for="bookname">Book Name</label>
-                    <input type="text" id="bookname" name="bookname" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="rollno">Roll No</label>
-                    <input type="text" id="rollno" name="rollno" required>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </div>
-
-            <div class="form-right">
-                <div class="form-group">
-                    <label for="branch">Branch</label>
-                    <select id="branch" name="branch" required>
-                        <option value="" disabled selected>Select your branch</option>
-                        <option value="cse">CSE</option>
-                        <option value="me">ME</option>
-                        <option value="ce">CE</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="semester">Semester</label>
-                    <select id="semester" name="semester" required>
-                        <option value="" disabled selected>Select your semester</option>
-                        <option value="1st">1st</option>
-                        <option value="2nd">2nd</option>
-                        <option value="3rd">3rd</option>
-                        <option value="4th">4th</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="issueDate">Book Issue Date</label>
-                    <input type="text" id="issueDate" name="issueDate" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="expireDate">Expire Date</label>
-                    <input type="text" id="expireDate" name="expireDate" readonly>
-                </div>
-            </div>
-        </form>
+    <div class="book-table-container">
+        <h2>Books Rent Details</h2>
+        <div class="book-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Catagory</th>
+                        <th>Availability</th>
+                        <!-- <th>Book Name</th>
+                        <th>Issue Date</th>
+                        <th>Expire Date</th>
+                        <th>Status</th>
+                        <th>Return</th> -->
+                    </tr>
+                </thead>
+                <tbody id="book-rent-list">
+                    <!-- JavaScript will populate this -->
+                </tbody>                    
+            </table>
+        </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const today = new Date();
-            const issueDate = today.toISOString().split('T')[0];
-
-            const expireDate = new Date(today);
-            expireDate.setDate(expireDate.getDate() + 14);
-            const expireDateString = expireDate.toISOString().split('T')[0];
-
-            document.getElementById('issueDate').value = issueDate;
-            document.getElementById('expireDate').value = expireDateString;
-        });
-
-        document.getElementById('studentForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form submission
-
-            const formData = {
-                name: document.getElementById('name').value,
-                rollno: document.getElementById('rollno').value,
-                branch: document.getElementById('branch').value,
-                semester: document.getElementById('semester').value,
-                bookname: document.getElementById('bookname').value,
-                issueDate: document.getElementById('issueDate').value,
-                expireDate: document.getElementById('expireDate').value,
-            };
-
-            const jsonData = JSON.stringify(formData, null, 2);
-            console.log(jsonData);
-
-            // Optionally, you can do something with the JSON data here, like sending it to a server
-        });
-    </script>
+    <script src="./Report/report.js"></script>
 </body>
-
 </html>

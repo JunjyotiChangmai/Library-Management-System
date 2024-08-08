@@ -1,72 +1,95 @@
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
     margin: 0;
-    background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.book-table-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.form-container {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 30px;
-    width: 600px;
-}
-
-#studentForm {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.form-container h2 {
-    text-align: center;
+.book-table-container h2 {
+    font-size: 24px;
     margin-bottom: 20px;
     color: #333;
+    font-weight: 600;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.form-group input, .form-group select {
+.book-table {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.6);
 }
 
-.form-group input:focus, .form-group select:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-}
-
-.submit-btn {
+.book-table table {
     width: 100%;
-    padding: 10px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-table th,
+.book-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.book-table th {
+    background-color: #6c63ff;
+    color: white;
+    font-weight: 600;
+}
+
+.book-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.book-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.return-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.yes-btn,
+.no-btn {
+    padding: 7px 12px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-    background: linear-gradient(135deg, #0056b3, #004494);
+.yes-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 12px;
+}
+
+.yes-btn:hover {
+    background-color: #218838;
+}
+
+.no-btn {
+    background-color: #dc3545;
+    color: white;
+    font-size: 12px;
+}
+
+.no-btn:hover {
+    background-color: #c82333;
+}
+
+.dot-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(44, 202, 44);
 }
