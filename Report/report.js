@@ -79,7 +79,7 @@ function updateDashboard(status) {
 
 // Demo data
 const demoData = [
-    { name: 'Junjyoti Changmai', rollNo: '19875643986401', branch: 'CSE', semester: '6', bookName: 'Data Structures', issueDate: '2024-08-01', expireDate: '2024-08-15', status: 'issued' },
+    { name: 'Junjyoti Changmai', rollNo: '19875643986401', branch: 'CSE', semester: '5', bookName: 'Data Structures', issueDate: '2024-08-01', expireDate: '2024-08-15', status: 'issued' },
     { name: 'Jane Smith', rollNo: '10987564398642', branch: 'ECE', semester: '5', bookName: 'Digital Electronics', issueDate: '2024-07-25', expireDate: '2024-08-10', status: 'issued' },
     { name: 'Alice Johnson', rollNo: '19875643986403', branch: 'IT', semester: '4', bookName: 'Database Management', issueDate: '2024-08-05', expireDate: '2024-08-20', status: 'issued' },
     { name: 'Bob Brown', rollNo: '19875643986404', branch: 'ME', semester: '7', bookName: 'Thermodynamics', issueDate: '2024-07-20', expireDate: '2024-08-05', status: 'returned' },
