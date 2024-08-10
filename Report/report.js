@@ -38,6 +38,7 @@ function addRowToTable(name, rollNo, branch, semester, bookName, issueDate, expi
 }
 
 function updateStatus(row, newStatus) {
+    console.log(row)
     const statusCell = row.querySelector('.status-cell');
     const returnButtons = row.querySelector('.return-buttons');
 
@@ -48,7 +49,7 @@ function updateStatus(row, newStatus) {
     returnButtons.style.display = 'none';
 
     // Update the dashboard counts
-    updateDashboard('returned');
+    updateDashboard('updateActiveAndReturnCount');
 }
 
 function updateDashboard(status) {
@@ -64,7 +65,9 @@ function updateDashboard(status) {
         issuedCount++;
         activeCount++;
     } else if (status === 'returned') {
-        issuedCount--;
+        issuedCount++;
+        returnedCount++;
+    } else if (status === 'updateActiveAndReturnCount') {
         returnedCount++;
         activeCount--;
     }

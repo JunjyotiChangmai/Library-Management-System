@@ -108,25 +108,41 @@ const books = [
 const booksTable = document.getElementsByClassName('books-section');
 
 function allBooks(getBooksData) {
-    getBooksData.forEach(element => {
-        const books = document.createElement('div');
-
-        books.style.display = `flex`;
-        books.style.padding = `15px 5px`;
-        books.style.backgroundColor = `white`;
-        books.style.borderRadius = `8px`;
-        books.style.marginBottom = `16px`;
-        books.style.boxShadow = `#ede7e7 0px 0px 3px`;
-
-        books.innerHTML = `
-        <div class="book-title-Box">${element.title}</div>
-        <div class="book-author-Box">${element.author}</div>
-        <div class="book-branch-Box">${element.catagory}</div>
-        <div class="book-av-Box">${element.stock === "0" ? `<div class="dot-icon" style="background-color: salmon;"></div>Out of Stock` : `<div class="dot-icon"></div>Available`}</div>
-    `;
-
-        booksTable[0].appendChild(books);
-    })
+    try {
+        getBooksData.forEach(element => {
+            //     const books = document.createElement('div');
+        
+            //     books.style.display = `flex`;
+            //     books.style.padding = `15px 5px`;
+            //     books.style.backgroundColor = `white`;
+            //     books.style.borderRadius = `8px`;
+            //     books.style.marginBottom = `16px`;
+            //     books.style.boxShadow = `#ede7e7 0px 0px 3px`;
+        
+            //     books.innerHTML = `
+            //     <div class="book-title-Box">${element.title}</div>
+            //     <div class="book-author-Box">${element.author}</div>
+            //     <div class="book-branch-Box">${element.catagory}</div>
+            //     <div class="book-av-Box">${element.stock === "0" ? `<div class="dot-icon" style="background-color: salmon;"></div>Out of Stock` : `<div class="dot-icon"></div>Available`}</div>
+            // `;
+        
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${element.title}</td>
+                <td>${element.author}</td>
+                <td>${element.catagory}</td>
+                <td>
+                    <div class="book-av-Box">${element.stock === "0" ? `<div class="dot-icon" style="background-color: salmon;"></div>Out of Stock` : `<div class="dot-icon"></div>Available`}</div>
+                </td>
+            `;
+        
+                // booksTable[0].appendChild(books);
+                booksTable[0].appendChild(newRow);
+            })
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 allBooks(books);
@@ -195,8 +211,15 @@ function getBookName() {
     let book = document.getElementsByClassName("search")[0].value;
     let availableBooks = searchName(books, book);
 
-    booksTable[0].innerHTML = " ";
-    allBooks(availableBooks);
+    if (availableBooks[0] === undefined) {
+        booksTable[0].innerHTML = " ";
+        booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
+    }
+    else {
+        booksTable[0].innerHTML = " ";
+        allBooks(availableBooks);
+    }
+
 }
 
 function searchName(books, bookTitle) {
@@ -220,8 +243,10 @@ function getCatagoryData(booksData, catagoryName) {
 }
 
 function filterCatagory(catagory) {
+    const filterTitleName = document.getElementsByClassName("filterCatagoryName");
     if (catagory === "cse") {
         const result = getCatagoryData(books, 'Computer Science');
+        filterTitleName[0].innerHTML = "CSE Books";
         if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -233,6 +258,7 @@ function filterCatagory(catagory) {
     }
     else if (catagory === "me") {
         const result = getCatagoryData(books, 'Mechanical Engineering');
+        filterTitleName[0].innerHTML = "ME Books";
         if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -244,6 +270,7 @@ function filterCatagory(catagory) {
     }
     else if (catagory === "ce") {
         const result = getCatagoryData(books, 'Civil Engineering');
+        filterTitleName[0].innerHTML = "CE Books";
         if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -255,6 +282,7 @@ function filterCatagory(catagory) {
     }
     else if (catagory === "others") {
         const result = getCatagoryData(books, 'Others');
+        filterTitleName[0].innerHTML = "Other Books";
         if (result[0] === undefined) {
             booksTable[0].innerHTML = " ";
             booksTable[0].innerHTML = `<div class="noBooks">No Books Found</div>`;
@@ -265,6 +293,7 @@ function filterCatagory(catagory) {
         }
     }
     else if (catagory === "all") {
+        filterTitleName[0].innerHTML = "All Books";
         booksTable[0].innerHTML = " ";
         allBooks(books);
     }

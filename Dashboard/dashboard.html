@@ -28,6 +28,9 @@
 
 
             <section class="SearchBooks">
+                <header>
+                    <h1>Search</h1>
+                </header>
                 <div class="right-navbar">
                     <div class="searchBar">
                         <input class="search" type="text" placeholder="Search Books">
@@ -41,23 +44,43 @@
                         <div class="branch-filter" onclick="filterCatagory('ce')">CE</div>
                         <div class="branch-filter" onclick="filterCatagory('others')">OTHERS</div>
                     </div>
-                    <div class="Profile">
+                    <!-- <div class="Profile">
                         <div class="pro-icon"><i class="fa-solid fa-user"></i></div>
                         <p>Admin</p>
+                    </div> -->
+                </div>
+
+                <!-- <div class="table-container"> -->
+                    <!-- <div id="booksTable"> -->
+                        <!-- <div class="title-Box">Title</div> -->
+                        <!-- <div class="author-Box">Author</div> -->
+                        <!-- <div class="branch-Box">Catagory</div> -->
+                        <!-- <div class="av-Box">Availability</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="books-section"> -->
+                        <!-- books are display here -->
+                    <!-- </div> -->
+                <!-- </div> -->
+
+                <div class="book-table-container">
+                    <h2 class="filterCatagoryName">All Books</h2>
+                    <div class="book-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Catagory</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody class="books-section">
+                                <!-- JavaScript will populate this -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
-                <div class="table-container">
-                    <div id="booksTable">
-                        <div class="title-Box">Title</div>
-                        <div class="author-Box">Author</div>
-                        <div class="branch-Box">Catagory</div>
-                        <div class="av-Box">Availability</div>
-                    </div>
-                    <div class="books-section">
-                        <!-- books are display here -->
-                    </div>
-                </div>
             </section>
 
 
