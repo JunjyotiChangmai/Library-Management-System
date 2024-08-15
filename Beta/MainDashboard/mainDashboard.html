@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>DEC Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo"><img src="../DEC_LOGO.png" alt="LOGO"></div>
+            <div class="menu">
+                <ul>
+                    <li class="report-btn" ><a href="/" style="color: #0007D6;"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
+                    <li class="search-btn" ><a href="../Search/search.html" style="color: #767272;"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
+                    <li class="addBook-btn" ><a href="../AddbookMain/AddBookMain.html" style="color: #767272;"><i class="fa-solid fa-book"></i>Add Book</a></li>
+                    <li class="addStu-btn" ><a href="../AddStudent/addStudent.html" style="color: #767272;"><i class="fa-solid fa-user"></i>Add Student</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+
+
+            <section class="ReportsData">
+                <div class="main-content">
+                    <header>
+                        <h1>Dashboard</h1>
+                    </header>
+
+                    <div class="dashboard-cards">
+                        <div class="card">
+                            <i class="fa-solid fa-book-open"></i>
+                            <h3>Total Books Issued</h3>
+                            <p id="total-issued">0</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-book-open"></i>
+                            <h3>Total Books Returned</h3>
+                            <p id="total-returned">0</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                            <h3>Active Rentals</h3>
+                            <p id="active-rentals">0</p>
+                        </div>
+                    </div>
+
+                    <div class="book-table-container">
+                        <h2>Books Issue Details</h2>
+                        <div class="book-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Roll No</th>
+                                        <th>Branch</th>
+                                        <th>Semester</th>
+                                        <th>Book Name</th>
+                                        <th>Issue Date</th>
+                                        <th>Expire Date</th>
+                                        <th>Status</th>
+                                        <th>Return</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="book-rent-list">
+                                    <!-- JavaScript will populate this -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+    <script src="mainDashboard.js"></script>
+</body>
+
+</html>
