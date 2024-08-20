@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>DEC Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo"><img src="../DEC_LOGO.png" alt="LOGO"></div>
+            <div class="menu">
+                <ul>
+                    <li class="report-btn" ><a href="../MainDashboard/mainDashboard.html" style="color: #767272;"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
+                    <li class="search-btn" ><a href="/" style="color: #0007D6;"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
+                    <li class="addBook-btn" ><a href="../AddbookMain/AddBookMain.html" style="color: #767272;"><i class="fa-solid fa-book"></i>Add Book</a></li>
+                    <li class="addStu-btn" ><a href="../AddStudent/addStudent.html" style="color: #767272;"><i class="fa-solid fa-user"></i>Add Student</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+
+
+            <section class="SearchBooks">
+                <header>
+                    <h1>Search</h1>
+                </header>
+                <div class="right-navbar">
+                    <div class="searchBar">
+                        <input class="search" type="text" placeholder="Search Books">
+                        <div onclick={getBookName()} class="search-icon"><i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="branch-catagory">
+                        <div id="branch-filter-box-all" style="background-color: #6c63ff; color: white;" class="branch-filter" onclick="filterCatagory('all')">ALL</div>
+                        <div id="branch-filter-box-cse" class="branch-filter" onclick="filterCatagory('cse')">CSE</div>
+                        <div id="branch-filter-box-me" class="branch-filter" onclick="filterCatagory('me')">ME</div>
+                        <div id="branch-filter-box-ce" class="branch-filter" onclick="filterCatagory('ce')">CE</div>
+                        <div id="branch-filter-box-other" class="branch-filter" onclick="filterCatagory('others')">OTHERS</div>
+                    </div>
+                </div>
+
+                <div class="book-table-container">
+                    <h2 class="filterCatagoryName">All Books</h2>
+                    <div class="book-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Catagory</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody class="books-section">
+                                <!-- JavaScript will populate this -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+     <script src="search.js"></script>
+</body>
+
+</html>
