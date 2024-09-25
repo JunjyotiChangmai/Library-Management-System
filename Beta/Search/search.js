@@ -311,3 +311,7 @@ function filterCatagory(catagory) {
         allBooks(books);
     }
 }
+
+// function getDataFormAddbook(data) {
+//     books.push(data);
+// }
