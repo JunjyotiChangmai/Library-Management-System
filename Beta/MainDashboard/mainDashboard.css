@@ -188,7 +188,8 @@ header h1 {
 }
 
 .book-table th {
-    background-color: #6c63ff;
+    /* background-color: #6c63ff; */
+    background-color: #4D4DFF;
     color: white;
     font-weight: 600;
 }

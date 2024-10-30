@@ -205,7 +205,7 @@ function filterCatagory(catagory) {
 
         allBox.style.backgroundColor = "white";
         allBox.style.color = "black";
-        cseBox.style.backgroundColor = "#6c63ff";
+        cseBox.style.backgroundColor = "#4D4DFF";
         cseBox.style.color = "white";
         meBox.style.backgroundColor = "white";
         meBox.style.color = "black";
@@ -228,7 +228,7 @@ function filterCatagory(catagory) {
     else if (catagory === "me") {
         allBox.style.backgroundColor = "white";
         allBox.style.color = "black";
-        meBox.style.backgroundColor = "#6c63ff";
+        meBox.style.backgroundColor = "#4D4DFF";
         meBox.style.color = "white";
         cseBox.style.backgroundColor = "white";
         cseBox.style.color = "black";
@@ -251,7 +251,7 @@ function filterCatagory(catagory) {
     else if (catagory === "ce") {
         allBox.style.backgroundColor = "white";
         allBox.style.color = "black";
-        ceBox.style.backgroundColor = "#6c63ff";
+        ceBox.style.backgroundColor = "#4D4DFF";
         ceBox.style.color = "white";
         meBox.style.backgroundColor = "white";
         meBox.style.color = "black";
@@ -274,7 +274,7 @@ function filterCatagory(catagory) {
     else if (catagory === "others") {
         allBox.style.backgroundColor = "white";
         allBox.style.color = "black";
-        otherBox.style.backgroundColor = "#6c63ff";
+        otherBox.style.backgroundColor = "#4D4DFF";
         otherBox.style.color = "white";
         meBox.style.backgroundColor = "white";
         meBox.style.color = "black";
@@ -297,7 +297,7 @@ function filterCatagory(catagory) {
     else if (catagory === "all") {
         cseBox.style.backgroundColor = "white";
         cseBox.style.color = "black";
-        allBox.style.backgroundColor = "#6c63ff";
+        allBox.style.backgroundColor = "#4D4DFF";
         allBox.style.color = "white";
         meBox.style.backgroundColor = "white";
         meBox.style.color = "black";
