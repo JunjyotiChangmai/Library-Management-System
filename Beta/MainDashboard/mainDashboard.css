@@ -113,11 +113,9 @@ header h1 {
 }
 
 .card {
-    /* background: linear-gradient(135deg, #6c63ff, #4a47a3); */
     background: white;
     padding: 25px 20px;
     border-radius: 15px;
-    /* color: #fff; */
     color: #4a47a3;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     flex: 1;
@@ -128,13 +126,7 @@ header h1 {
     align-items: center;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
 .card h3 {
-    /* font-size: 18px; */
     font-size: 17px;
     margin-bottom: 9px;
     font-weight: 500;
