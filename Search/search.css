@@ -9,7 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("../Login2.jpg");
+    background-image: url("../login2.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +89,193 @@ li a {
     right: -16px;
 }
 
-/* mainDashboard css code */
+/* search css code */
+.right-navbar {
+    /* padding: 0px 20px 30px 20px; */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 24px;
+}
+
+.searchBar {
+    width: 410px;
+    border: none;
+    box-shadow: #C7C7C7 0px 0px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px 5px 5px 20px; */
+    padding: 7px 5px 7px 20px;
+    border-radius: 8px;
+    /* border-radius: 24px; */
+    background-color: white;
+}
+
+.search {
+    width: 340px;
+    height: 22px;
+    border: none;
+    outline: none;
+    color: #4D4D4D;
+}
+
+.search-icon {
+    width: 36px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-icon i {
+    color: #151ce7;
+    /* color: #F76B56; */
+}
+
+.branch-catagory {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.branch-filter {
+    width: 90px;
+    border: none;
+    box-shadow: #C7C7C7 0px 0px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    /* border-radius: 24px; */
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #4D4D4D;
+    cursor: pointer;
+}
+
+.Profile {
+    width: 110px;
+    border: none;
+    box-shadow: #C7C7C7 0px 0px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-radius: 24px;
+    background-color: white;
+}
+
+.pro-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0007D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Profile p {
+    margin-right: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#booksTable {
+    display: flex;
+    width: 100%;
+    padding-bottom: 6px;
+    color: #414141;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.books-section {
+    overflow: scroll;
+    scrollbar-width: none;
+    font-size: 15px;
+}
+
+.title-Box {
+    width: 40%;
+    padding: 7px 16px 7px 0px;
+}
+
+.author-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+}
+
+.branch-Box {
+    width: 20%;
+    padding: 7px 16px 7px 0px;
+}
+
+.av-Box {
+    width: 20%;
+    padding: 7px 16px 7px 0px;
+}
+
+.book-title-Box {
+    width: 40%;
+    padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
+}
+
+.book-author-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
+}
+
+.book-branch-Box {
+    width: 20%;
+    padding: 7px 16px 7px 7px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    height: 27px;
+}
+
+.book-av-Box {
+    width: 100%;
+    padding: 7px 16px 7px 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(44, 202, 44);
+}
+
+.noBooks {
+    width: 100%;
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4D4D4D;
+}
+
+
+/* extra code */
 .main-content {
     width: 100%;
 }
@@ -113,9 +299,11 @@ header h1 {
 }
 
 .card {
+    /* background: linear-gradient(135deg, #6c63ff, #4a47a3); */
     background: white;
     padding: 25px 20px;
     border-radius: 15px;
+    /* color: #fff; */
     color: #4a47a3;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     flex: 1;
@@ -126,7 +314,13 @@ header h1 {
     align-items: center;
 }
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .card h3 {
+    /* font-size: 18px; */
     font-size: 17px;
     margin-bottom: 9px;
     font-weight: 500;
@@ -180,8 +374,8 @@ header h1 {
 }
 
 .book-table th {
-    /* background-color: #6c63ff; */
     background-color: #4D4DFF;
+    /* background-color: #6c63ff; */
     color: white;
     font-weight: 600;
 }
