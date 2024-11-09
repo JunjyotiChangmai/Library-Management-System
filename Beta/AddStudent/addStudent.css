@@ -103,6 +103,7 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
 .form-container {
@@ -114,7 +115,7 @@ li a {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 30px;
-    width: 730px;
+    width: 700px;
 }
 
 #studentForm {
@@ -126,7 +127,8 @@ li a {
 .form-data {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 85px;
     padding-bottom: 30px;
 }
 
@@ -172,7 +174,7 @@ li a {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: #4D4DFF;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -181,4 +183,50 @@ li a {
 
 .submit-btn:hover {
     background: linear-gradient(135deg, #0056b3, #004494);
+}
+
+
+/* search book */
+.find-book {
+    width: 20%;
+    height: 482px;
+    max-width: 600px;
+    background: #fff;
+    padding: 30px 18px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: #C7C7C7 0px 0px 3px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    overflow:scroll;
+    scrollbar-width: none;
+}
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.search-box button {
+    padding: 10px 14px;
+    background: #4D4DFF;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.results {
+    margin-top: 20px;
+}
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.selectBook {
+    padding:0px 5px 10px 5px;
 }

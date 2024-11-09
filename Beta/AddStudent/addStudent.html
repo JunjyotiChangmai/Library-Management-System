@@ -18,7 +18,7 @@
                     <li class="report-btn" ><a href="../MainDashboard/mainDashboard.html" style="color: #767272;"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
                     <li class="search-btn" ><a href="../Search/search.html" style="color: #767272;"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
                     <li class="addBook-btn" ><a href="../AddbookMain/AddBookMain.html" style="color: #767272;"><i class="fa-solid fa-book"></i>Add Book</a></li>
-                    <li class="addStu-btn" ><a href="/" style="color: #0007D6;"><i class="fa-solid fa-user"></i>Add Student</a></li>
+                    <li class="addStu-btn" ><a href="/" style="color: #0007D6;"><i class="fa-solid fa-user"></i>Book Issue</a></li>
                 </ul>
             </div>
         </div>
@@ -28,13 +28,13 @@
             <section class="AddStudentForm">
                 <div class="addStudentFormMainContainer">
                     <div class="form-container">
-                        <h2>Student Form</h2>
+                        <h2>Book Issuing Form</h2>
                         <form id="studentForm">
                             <div class="form-data">
                                 <div class="form-left">
                                     <div class="form-group">
                                         <label for="bookname">Book Name</label>
-                                        <input type="text" id="bookname" name="bookname" required>
+                                        <input type="text" id="bookname" name="bookname" readonly>
                                     </div>
 
                                     <div class="form-group">
@@ -71,6 +71,10 @@
 
                                 <div class="form-right">
                                     <div class="form-group">
+                                        <label for="bookid">Book ID</label>
+                                        <input type="text" id="bookid" name="bookid" readonly>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="name">Name</label>
                                         <input type="text" id="name" name="name" required>
                                     </div>
@@ -88,13 +92,24 @@
                             <button type="submit" class="submit-btn">Submit</button>
                         </form>
                     </div>
+
+                    <div class="find-book">
+                        <div class="selectBook">Select Book</div>
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search books">
+                            <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="results" id="results">
+                            <!-- Search results will be displayed here -->
+                        </div>
+                    </div>
                 </div>
             </section>
 
 
         </div>
     </div>
-    <!-- <script src="script.js"></script> -->
+    <script type="module" src="addStudent.js"></script>
 </body>
 
 </html>

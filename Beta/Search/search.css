@@ -374,7 +374,8 @@ header h1 {
 }
 
 .book-table th {
-    background-color: #6c63ff;
+    background-color: #4D4DFF;
+    /* background-color: #6c63ff; */
     color: white;
     font-weight: 600;
 }

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEC Library Login</title>
+    <title>DEC Library Sign-Up</title>
     <link rel="shortcut icon" href="../DEC_LOGO.png" type="image/x-icon" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
     <div class="container">
       <div class="content">
-        <form action="../Dashboard/dashboard.html" id="card">
+        <form action="../Login/login.html">
           <img
             class="logo"
             src="../DEC_LOGO.png "
@@ -18,18 +18,19 @@
             height="220px"
             alt="dec-logo"
           />
-          <h3>Welcome Back</h3>
-          <p>Sign in to continue your Digital Library</p>
+          <h3>New User</h3>
+          <p>Sign Up to continue create your Digital Library</p>
 
           <div class="box">
+            <input type="text" name="" id="" placeholder="College ID" />
             <input type="email" placeholder="Student College Email" />
             <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <input type="text" placeholder="Confirm Password" />
+            <button>Sign Up</button>
           </div>
 
           <div class="card-btm">
-            <p>New User? <a href="../Sign-Up/signup.html">Sign Up</a></p>
-            <p><a href="#">Forgotten Password?</a></p>
+            <p>Already a user? <a href="../Login/login.html">Login</a></p>
             <br />
             <p><a href="../Landing Page/index.html">Home</a></p>
           </div>
